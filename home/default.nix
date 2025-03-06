@@ -45,12 +45,13 @@
       # settings
       arandr
       brightnessctl
-      python3Packages.iwlib
 
       # messaging
       discord
-      floorp
+      google-chrome
       teams-for-linux
+      firefox-devedition
+      termius
 
       # dev
       nix-output-monitor

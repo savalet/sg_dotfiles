@@ -1,4 +1,4 @@
-{ pkgs, ecsls, ehcsls, system, ... }:
+{ pkgs, ecsls, system, ... }:
 {
   home.file = {
     nvim_conf = {
@@ -25,23 +25,17 @@
     plugins = [ pkgs.vimPlugins.lazy-nvim ];
 
     extraPackages = with pkgs; let
-      getLsp = flake: flake.packages.${system}.default;
-      ecsls-pkg = getLsp ecsls;
-      ehcsls-pkg = getLsp ehcsls;
+      ecsls-pkg = ecsls.packages.${system}.default;
     in
     [
       nil
       lua-language-server
       pyright
       clang-tools
-      llvmPackages.clang
-      llvmPackages.clang-tools
+      llvmPackages_latest.clang
       nodejs
       xclip
       ecsls-pkg
-      ehcsls-pkg
-      haskell.packages.ghc984.haskell-language-server
-      (pkgs.callPackage ./fzf-make.nix { })
     ];
   };
 }

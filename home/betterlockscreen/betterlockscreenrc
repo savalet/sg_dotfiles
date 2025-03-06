@@ -13,7 +13,7 @@ quiet=false
 # default theme
 loginbox=00000066
 loginshadow=00000000
-locktext="OwO what's this?"
+locktext="Oh no, this pc is locked :)"
 font="JetbrainsMonoNerdFont"
 ringcolor=ffffffff
 insidecolor=00000000

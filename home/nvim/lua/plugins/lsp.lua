@@ -31,9 +31,8 @@ lspconfig.clangd.setup({
     "--offset-encoding=utf-16",
     "--header-insertion=never",
     "--clang-tidy",
-  },
-  init_options = {
-  },
+    "--cross-file-rename",
+  }
 })
 lspconfig.pyright.setup({})
 
@@ -73,10 +72,11 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("n", "ga", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "gf", function() vim.diagnostic.open_float() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "gf", function() vim.diagnostic.open_float() end, opts)
 
   lsp.default_keymaps({buffer = bufnr})
 end)
 
 lsp.setup()
+
