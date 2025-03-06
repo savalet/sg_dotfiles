@@ -147,6 +147,13 @@
             common-pc-ssd
           ]);
 
+          pluton = mk-system "pluton" (with nhw-mod; [
+            common-pc-laptop
+            common-cpu-intel
+            common-pc-ssd
+          ]);
+
+
           Toaster = mk-system "Toaster" [ ];
         };
       }

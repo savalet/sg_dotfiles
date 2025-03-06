@@ -47,7 +47,6 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.grub.useOSProber = true;
 
   # Enable sound with pipewire.
