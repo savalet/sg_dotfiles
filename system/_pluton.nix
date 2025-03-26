@@ -34,10 +34,12 @@
       powerManagement.enable = false;
       powerManagement.finegrained = false;
 
-      open = true;
+      open = false;
       nvidiaSettings = true;
       prime = {
-        intelBusId = "PCI:0:2:0";
+        offload.enable = true;
+        offload.enableOffloadCmd = true; # install `nvidia-offload`
+        intelBusId = "PCI:0:02:0";
         nvidiaBusId = "PCI:1:0:0";
       };
     };
@@ -46,6 +48,9 @@
       enable = true;
     };
   };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
 
   boot.loader.grub.useOSProber = true;
 
@@ -58,13 +63,13 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  services = {
-    asusd = {
-      enable = true;
-      enableUserService = true;
-    };
+  #services = {
+  #  asusd = {
+  #    enable = true;
+  #    enableUserService = true;
+  #  };
+  #};
 
-  };
   services.xserver.dpi = 115;
   services.netbird.enable = true;
   nixpkgs.config.allowUnfree = true;
