@@ -23,7 +23,7 @@ keys = [
     Key([mod, "shift"], "v", lazy.spawn("pavucontrol")),
     Key([mod], "l", lazy.spawn("betterlockscreen -l")),
     Key([mod], "f", lazy.window.toggle_floating()),
-    Key([mod], "b", lazy.spawn("google-chrome-stable")),
+    Key([mod], "b", lazy.spawn("firefox-devedition")),
     Key([], "Print", lazy.spawn("flameshot gui --clipboard")),
     Key([mod], "space", lazy.layout.next()),
     Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
