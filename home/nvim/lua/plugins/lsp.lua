@@ -23,6 +23,14 @@ lspconfig.lua_ls.setup {
   },
 }
 
+vim.diagnostic.config({
+  virtual_text = true,       -- Affiche les warnings/erreurs inline
+  signs = true,              -- Affiche les signes dans la colonne de gauche
+  underline = true,          -- Souligne les lignes concernées
+  update_in_insert = false,  -- N'affiche pas les diagnostics pendant l'insert
+  severity_sort = true,      -- Trie les messages par sévérité
+})
+
 lspconfig.nil_ls.setup({})
 lspconfig.clangd.setup({
   cmd = {
