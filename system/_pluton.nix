@@ -70,6 +70,12 @@
   #  };
   #};
 
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+
   services.xserver.dpi = 115;
   services.netbird.enable = true;
   nixpkgs.config.allowUnfree = true;

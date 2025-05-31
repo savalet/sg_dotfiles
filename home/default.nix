@@ -17,6 +17,7 @@
     ./picom
     ./dunst
     ./qtile
+    ./hyprland
     ./tmux
     ./zsh
 
@@ -76,6 +77,8 @@
       dconf
       zip
       unzip
+
+      wofi
     ];
   };
 
