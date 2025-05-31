@@ -31,14 +31,14 @@
       modesetting.enable = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-      powerManagement.enable = false;
-      powerManagement.finegrained = false;
+      powerManagement.enable = true;
+      powerManagement.finegrained = true;
 
       open = false;
       nvidiaSettings = true;
       prime = {
         offload.enable = true;
-        offload.enableOffloadCmd = true; # install `nvidia-offload`
+        offload.enableOffloadCmd = true;
         intelBusId = "PCI:0:02:0";
         nvidiaBusId = "PCI:1:0:0";
       };
