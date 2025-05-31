@@ -10,7 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "vfat" "nls_cp437" "nls_iso8859-1" "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" "nvidia" ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.yubikeySupport = true;
