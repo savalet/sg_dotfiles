@@ -50,7 +50,6 @@
       # messaging
       discord
       google-chrome
-      teams-for-linux
       firefox-devedition
       termius
 
@@ -79,6 +78,8 @@
       unzip
 
       wofi
+      hyprpaper
+      sway-contrib.grimshot
     ];
   };
 
