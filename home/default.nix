@@ -18,6 +18,7 @@
     ./dunst
     ./qtile
     ./hyprland
+    ./xkb
     ./tmux
     ./zsh
 
@@ -30,9 +31,6 @@
     ./kitty.nix
   ];
 
-  xdg.configFile."xkb/symbols/us_qwerty-fr".source =
-    "${pkgs.callPackage ./../system/qwerty-fr.nix {}}"
-    + "/usr/share/X11/xkb/symbols/us_qwerty-fr";
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
