@@ -78,6 +78,8 @@
       wofi
       hyprpaper
       sway-contrib.grimshot
+
+      scom
     ];
   };
 
