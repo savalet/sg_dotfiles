@@ -80,6 +80,7 @@
       sway-contrib.grimshot
 
       scom
+      prismlauncher
     ];
   };
 
