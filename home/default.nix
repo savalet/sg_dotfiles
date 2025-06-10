@@ -81,6 +81,7 @@
 
       scom
       prismlauncher
+      winbox4
     ];
   };
 
